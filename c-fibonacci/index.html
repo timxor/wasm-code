@@ -1,0 +1,8 @@
+<script src="fib.js"></script>
+<script>
+  Module.onRuntimeInitialized = _ => {
+    const fib = Module.cwrap('fib', 'number', ['number']);
+    alert("fib(12) = " + fib(12));
+    // -> 233
+  };
+</script>
